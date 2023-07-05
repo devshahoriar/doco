@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ps-menu-root ul {
+  @apply flex flex-col justify-center items-center gap-5;
+}
+.ps-menuitem-root {
+  @apply !w-[80%];
+}
+.ps-menu-button {
+  @apply !w-full !p-0 !text-white text-xl rounded-lg;
+}
+.ps-menu-icon {
+  @apply text-2xl ml-1;
+}
+.ps-menu-button {
+  @apply hover:!bg-primary;
+}
+.ps-active {
+  @apply bg-primary rounded-lg;
+}
+.ps-collapsed .ps-menu-label {
+  @apply invisible h-0 w-0 hidden;
+}
+.ps-collapsed .ps-menu-icon {
+  @apply p-0 m-0;
+}
+.ps-collapsed .ps-menu-button {
+  @apply justify-center;
+}
+@layer {
+  .ps-collapsed .logoDiv {
+    @apply !ml-0 justify-center;
+  }
+}
+
+.invenTable tr {
+  @apply mt-1;
+}
+
+.orderTable thead th {
+  @apply bg-sec_light bg-opacity-50 font-semibold;
+}
+.orderTable tbody tr {
+  @apply bg-sec_light bg-opacity-10 px-1 rounded-md;
+}
+
+.linear-wipe {
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #ff0000 10%,
+    #fffb00 50%,
+    #ff0000 100%
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 30s linear infinite;
+  animation: shine 30s linear infinite;
+}
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+/* retailar searchbox style */
+.retSearchBox .wrapper{
+  @apply !rounded-md
+}
+.retSearchBox .search-icon{
+  fill: #000;
+  @apply h-6 w-6
+}
